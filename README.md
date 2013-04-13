@@ -7,6 +7,7 @@ A small JS component you can use to add a button to any HTML page which will out
 <p>
   This component adds a button to the lower right corner of any HTML page. This is a more accurate test of page performance then some traditional methods for testing. Many traditional tools only test the time it takes for the client computer to receive an HTML page, and does not take into account the time it takes the browser to parse and display the HTML page to the user. JSPagePerf gives the full "to glass" performance time, which includes the network time to get the HTML page, the time to parse the DOM and display the page to the user.
 </p>
+<img src="https://raw.github.com/rwblackburn/JSPagePerf/c301bc339e63175995b8bbf9196e36874c9a18a7/JSPagePerf/docs/screenshot.png" />
 <h2>Setup &amp; Installation</h2>
 This is done in only a few easy steps:
 <ol>
