@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>JSPagePerf Example</title>
+	
+	<!-- STEP1: Include jQuery & jQuery UI API. -->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	
+	<!-- STEP2: Download & include the JSPagePerf.js file. -->
+	<script type="text/javascript" src="JSPagePerf.js"></script>
+	
+	<!-- STEP3 (optional): Include Google Visualization API. -->
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+	<!-- STEP4: Invoke "new JSPagePerf()" any time after the page is fully loaded. -->		
+	<script type="text/javascript">
+
+		var main = function(){
+			new JSPagePerf();
+		};
+
+		// If you included Google Viz API,...
+		google.load('visualization', '1.0', {'packages':['corechart']});
+		google.setOnLoadCallback(main);
+		
+		// If you did not include Googel Viz API...
+		//$(document).ready(main);
+		
+	</script>
+</head>
+<body>
+<h1>JSPagePerf Example</h1>
+This page provides an example of the <strong>JSPagePerf</strong> component. 
+<h2>How it Works</h2>
+<p>
+	This component adds a button to the lower right corner of any HTML page. You should see such a button on this page, take a look in the lower right corner of the page and you should see a button labeled "JSPagePerf". Click this button and you will be given detailed information about how lon it took for this page to load and render to the screen.
+</p>
+<strong>Go ahead and give it a try now</strong>
+<p>
+	This is a more accurate test of page performance then some traditional methods for testing. Many traditional tools only test the time it take for the client computer to receive an HTML page, and does not take into account the time it takes the browser to parse and display the HTML page to the user. JSPagePerf gives the full "to glass" performance time, which includes the network time to get the HTML page, the time to parse the DOM and display the page to the user.
+</p>
+<h2>Setup &amp; Installation</h2>
+This is done in only a few easy steps:
+<ol>
+	<li>
+		Include jQuery &amp; jQuery UI API:<code><pre>
+		&lt;link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css"&gt;
+		&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"&gt;&lt;/script&gt;
+		&lt;script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"&gt;&lt;/script&gt;
+		</pre></code>
+	</li>
+
+	<li>
+		<a href="https://github.com/rwblackburn/JSPagePerf">Download</a> &amp; include the JSPagePerf.js file:<code><pre>
+		&lt;script type="text/javascript" src="JSPagePerf.js"&gt;&lt;/script&gt;
+		</pre></code>
+	</li>
+
+	<li>
+		Optionally* include Google Visualization API:<code><pre>
+		&lt;script type="text/javascript" src="https://www.google.com/jsapi"&gt;&lt;/script&gt;
+		</pre></code>
+		<em>* - This simply makes the performance report look nicer.</em><br />&nbsp;
+	</li>
+	
+	<li>Invoke <code>new JSPagePerf();</code> any time after the page is fully loaded. For example, if you included the Google Visualization API, you could do this:<code><pre>	
+		&lt;script type="text/javascript"&gt;
+	
+			var main = function(){
+				new JSPagePerf();
+			};
+	
+			google.load('visualization', '1.0', {'packages':['corechart']});
+			google.setOnLoadCallback(main);
+			
+		&lt;/script&gt;
+		</pre></code>
+		Or if you did not include the Google Vizualization API:
+		<code><pre>	
+		&lt;script type="text/javascript"&gt;
+	
+			var main = function(){
+				new JSPagePerf();
+			};
+	
+			$(document).ready(main);
+			
+		&lt;/script&gt;
+		</pre></code> 
+	</li>
+
+</ol>
+
+
+
+</body>
+</html>

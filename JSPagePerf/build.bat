@@ -1,0 +1,1 @@
+java -jar compiler.jar --externs externs/*.js --js src/*.js --js_output_file build/JSPagePerf.min.js
